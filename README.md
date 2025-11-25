@@ -52,7 +52,7 @@ Documentation goes stale the moment it's written—unless it updates itself.
 
 *   **Changelog Agent**: Scans git history to generate human-readable "Release Notes" (Features vs. Fixes).
     
-*   **Smart Updater**: Intelligently appends new sections (like "Business Logic" or "New Features") to _existing_ pages without overwriting current content.
+*   **Smart Updater**: Intelligently appends new sections (like "Updated Features" or "New Features") to _existing_ pages without overwriting current content.
     
 
 ### 4\. 🛡️ Human-in-the-Loop Approval
@@ -75,7 +75,9 @@ Codeflow runs on a multi-agent orchestration architecture powered by **Google Ge
 ### The Agent Squad
 
 *   **Orchestrator**: The brain. Routes requests (Create vs. Update vs. Chat).
-    
+
+*   **Repo Agent**: Has Github MCP connected to answer repo related queries.    
+
 *   **Repo Architect**: Reverse-engineers code structure.
     
 *   **Flow Creator**: Writes Mermaid.js syntax for visualizations.
@@ -90,34 +92,16 @@ Codeflow runs on a multi-agent orchestration architecture powered by **Google Ge
 🚀 Getting Started
 ------------------
 
-### Prerequisites
+## Prerequisites
 
 *   Python 3.10+
     
 *   Google Cloud Project (for Gemini API)
     
-*   Atlassian Confluence Account (API Key + Email)
+*   Atlassian Confluence Account (API Key + Email + Confluence Domain URL)
     
-*   GitHub Copilot MCP (Model Context Protocol) Access
+*   GitHub Copilot MCP (Model Context Protocol) Access Token
     
-
-### Installation
-
-1.  git clone \[https://github.com/yourusername/codeflow.git\](https://github.com/yourusername/codeflow.git)cd codeflow
-    
-2.  pip install -r requirements.txt
-    
-3.  export CONFLUENCE\_DOMAIN="\[https://your-domain.atlassian.net\](https://your-domain.atlassian.net)"export CONFLUENCE\_EMAIL="your-email@example.com"export CONFLUENCE\_API\_KEY="your-atlassian-api-token"export GITHUB\_API\_KEY="your-github-token"export GOOGLE\_API\_KEY="your-gemini-key"
-    
-4.  python main.py
-    
-
-## 🛠️ Prerequisites
-
--   Python 3.10+
--   A Google Cloud Project with Gemini API access.
--   A GitHub account and Personal Access Token.
--   An Atlassian (Confluence) account and API Token.
 
 ## 📦 Installation
 
@@ -192,8 +176,8 @@ CodeFlow is built as an ADK application. You can run it using the `adk` CLI.
 
 ## 📂 Project Structure
 
--   `tools/agent.py`: Defines the agents (Chat, Repo, Flow Creator, Confluence) and the main application entry point.
--   `tools/tools.py`: Implements the tools for GitHub, Confluence, and diagram generation.
+-   `tools/agent.py`: Defines the agents (Chat, Repo, Flow Creator, Confluence etc.) and the main application entry point.
+-   `tools/tools.py`: Implements the tools for GitHub, Confluence, and diagram generation etc.
 -   `tools/config.py`: Handles configuration and environment variables.
 -   `tools/prompts.py`: Contains the system instructions and prompts for each agent.
 -   `agents/`: (Directory for additional agent modules).
