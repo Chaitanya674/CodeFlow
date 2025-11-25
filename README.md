@@ -92,9 +92,9 @@ CodeFlow is built as an ADK application. You can run it using the `adk` CLI.
     ```
 
 3.  **Interact with the Agent:**
-    -   Open your browser and navigate to the URL provided by the `adk` output (usually `http://localhost:3000` or similar).
+    -   Open your browser and navigate to the URL provided by the `adk` output (usually `http://localhost:8000` or similar).
     -   Start a chat with the agent.
-    -   Ask it to "Analyze this repository and publish documentation to Confluence".
+    -   Ask it to "Analyze and Create a Confluence Page for this repo : https://<link-to-any-repo>".
     -   The agent will guide you through the process, asking for approval before publishing.
 
 ## 📂 Project Structure
