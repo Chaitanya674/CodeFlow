@@ -69,7 +69,8 @@ AI drafts it; You own it.
 
 Codeflow runs on a multi-agent orchestration architecture powered by **Google Gemini 2.5**.
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   graph TD      User[User / Developer] -->|Query| Orch{Orchestrator Agent}      Orch -->|General Q| Chat[Chat Agent]      Orch -->|Create Docs| Data[Data Agent]      Orch -->|Update Page| Update[Updater Agent]      Orch -->|Release Notes| Change[Changelog Agent]      subgraph "Data Extraction"          Data --> Repo[Repo Architect]          Data --> Flow[Flow Creator]      end      Repo -->|Structure| Draft[Confluence Drafter]      Flow -->|Mermaid Code| Draft      Draft -->|Markdown| Approval{Human Approval}      Update -->|Merged Content| Approval      Change -->|Release Notes| Approval      Approval -- REJECT --> Refine[Refiner Agent]      Refine --> Approval      Approval -- APPROVE --> Conf((Confluence API))   `
+<img width="695" height="864" alt="Screenshot from 2025-11-26 00-29-54" src="https://github.com/user-attachments/assets/e83fc685-773f-423e-8b99-576e4196008c" />
+
 
 ### The Agent Squad
 
