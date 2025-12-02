@@ -107,7 +107,7 @@ Codeflow runs on a multi-agent orchestration architecture powered by **Google Ge
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Chaitanya674/CodeFlow.git
     cd CodeFlow
     ```
 
